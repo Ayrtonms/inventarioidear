@@ -1,0 +1,6 @@
+DELETE: schtasks /delete /tn InventarioIdear
+QUERY: schtasks /query /tn InventarioIdear
+
+schtasks /create /tn InventarioIdear /sc minute /mo 1 /tr C:\Users\Ayrton\Desktop\testes\task.bat
+
+schtasks /create /tn InventarioIdear /sc minute /mo 1 /rl HIGHEST /tr "C:\php\php.exe -f \"C:\Users\Ayrton\Desktop\testes\task.php\""

@@ -1,0 +1,11 @@
+Para INSTALAR o programa, deve-se seguir os seguintes passos:
+
+1 - Instalar o PHP
+2 - Abrir o prompt como administrador
+3 - Navegar até a pasta onde estão os arquivos
+4 - Executar o seguinte comando: php instalador.php
+
+Para DESINSTALAR o programa, deve-se seguir os seguintes passos:
+
+1 - Abrir o prompt como administrador
+2 - Executar o seguinte comando: schtasks /delete /tn InventarioIdear
