@@ -8,7 +8,7 @@
 
         $php_path = trim($x[0]);
         $datetime = date('Y-m-d') . 'T' . date('H:i:s');
-        $task_path = getcwd() . DIRECTORY_SEPARATOR . 'task.php';
+        $task_path = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'task.php';
 
         $corpo_xml = '<?xml version="1.0" encoding="UTF-16"?>
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
@@ -68,6 +68,15 @@
 
         unlink('InventarioIdear.xml');
     } else {
-        $data = include(('linux' . DIRECTORY_SEPARATOR . 'dados_computador.php'));
+        $x = [];
+
+        exec("which php", $x);
+
+        $php_path = trim($x[0]);
+        $task_path = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'task.php';
+
+        $task_path = str_replace('//', '/', $task_path);
+
+        file_put_contents('/etc/cron.d/inventarioidear', "* * * * * root $php_path $task_path\n");
     }
 ?>

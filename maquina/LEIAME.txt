@@ -1,11 +1,58 @@
-Para INSTALAR o programa, deve-se seguir os seguintes passos:
+WINDOWS:
+    Pré-requisitos:
+        PHP (qualquer versão)
 
-1 - Instalar o PHP
-2 - Abrir o prompt como administrador
-3 - Navegar até a pasta onde estão os arquivos
-4 - Executar o seguinte comando: php instalador.php
+    OBSERVAÇÕES:
+        1 - Antes de se instalar o programa, deve-se instalar os pré-requisitos e testar os seguintes comandos no prompt (aberto como administrador):
 
-Para DESINSTALAR o programa, deve-se seguir os seguintes passos:
+            wmic CPU get NAME
+            schtasks /query /tn teste
 
-1 - Abrir o prompt como administrador
-2 - Executar o seguinte comando: schtasks /delete /tn InventarioIdear
+        Os comandos não precisam retornar nada de útil, mas precisam funcionar, pois são essenciais para o funcionamento do script.
+
+    Para INSTALAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Incluir o PHP na variável de ambiente Path
+        2 - Abrir o prompt como administrador
+        3 - Navegar até a pasta onde estão os arquivos
+        4 - Executar o seguinte comando: php instalador.php
+
+    Para DESINSTALAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o prompt como administrador
+        2 - Executar o seguinte comando: schtasks /delete /tn InventarioIdear
+
+    Para TESTAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o prompt na pasta onde estão os arquivos PHP
+        2 - Executar o seguinte comando: php task.php
+
+LINUX:
+    Pré-requisitos:
+        PHP (qualquer versão)
+        cron
+
+    OBSERVAÇÕES:
+        1 - Antes de se instalar o programa, deve-se instalar os pré-requisito
+
+        2 - O serviço cron PRECISA estar em execução, e configurado para iniciar junto com o sistema operacional, para que o script volte a executar sempre que o computador for reiniciado.
+
+    Para INSTALAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o prompt como root
+        2 - Navegar até a pasta onde estão os arquivos
+        3 - Executar o seguinte comando: php instalador.php
+
+    Para DESINSTALAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o prompt como root
+        2 - Navegar até a pasta onde estão os arquivos, no diretório "linux"
+        3 - Executar o seguinte comando: php desinstalador.php
+
+    Para TESTAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o prompt na pasta onde estão os arquivos PHP
+        2 - Executar o seguinte comando: php task.php
+
+OBSERVAÇÕES GERAIS:
+    O link da API deve ser informado no arquivo variáveis.php

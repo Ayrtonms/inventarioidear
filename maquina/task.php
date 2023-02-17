@@ -1,14 +1,14 @@
 <?php
-    $env = include('variaveis.php');
+    $env = include((dirname(__FILE__) . DIRECTORY_SEPARATOR . 'variaveis.php'));
 
     $url = $env['API'] . '/cadastro.php';
 
     $data = array();
 
     if (substr(mb_strtoupper(PHP_OS), 0, 3) === 'WIN') {
-        $data = include(('windows' . DIRECTORY_SEPARATOR . 'dados_computador.php'));
+        $data = include((dirname(__FILE__) . DIRECTORY_SEPARATOR . 'windows' . DIRECTORY_SEPARATOR . 'dados_computador.php'));
     } else {
-        $data = include(('linux' . DIRECTORY_SEPARATOR . 'dados_computador.php'));
+        $data = include((dirname(__FILE__) . DIRECTORY_SEPARATOR . 'linux' . DIRECTORY_SEPARATOR . 'dados_computador.php'));
     }
 
     if (!count(array_keys($data))) {
