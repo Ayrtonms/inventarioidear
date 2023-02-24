@@ -77,6 +77,6 @@
 
         $task_path = str_replace('//', '/', $task_path);
 
-        file_put_contents('/etc/cron.d/inventarioidear', "* * * * * root $php_path $task_path\n");
+        file_put_contents('/etc/cron.d/inventarioidear', "*/30 * * * * root $php_path $task_path\n");
     }
 ?>

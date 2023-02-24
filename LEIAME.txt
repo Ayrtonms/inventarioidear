@@ -1,0 +1,47 @@
+WINDOWS:
+    Pré-requisitos:
+        PHP (qualquer versão) (precisa incluir no Path)
+
+    Para TESTAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o prompt como administrador
+        2 - Navegar até a pasta onde estão os arquivos
+        3 - Executar o seguinte comando: php task.php
+        4 - Se o executável não retornar nenhum erro, basta verificar no sistema, menu "máquinas", se a nova máquina foi cadastrada
+
+    Para INSTALAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o prompt como administrador
+        2 - Navegar até a pasta onde estão os arquivos
+        3 - Executar o seguinte comando: php instalador.php
+
+    Para DESINSTALAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o prompt como administrador
+        2 - Executar o seguinte comando: schtasks /delete /tn InventarioIdear
+
+LINUX:
+    Pré-requisitos:
+        PHP (qualquer versão)
+        cron
+
+    OBSERVAÇÃO:
+        O serviço cron PRECISA estar em execução, e configurado para iniciar junto com o sistema operacional, para que o script volte a executar sempre que o computador for reiniciado
+
+    Para TESTAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o terminal como root
+        2 - Navegar até a pasta onde estão os arquivos
+        3 - Executar o seguinte comando: php task.php
+        4 - Se o executável não retornar nenhum erro, basta verificar no sistema, menu "máquinas", se a nova máquina foi cadastrada
+
+    Para INSTALAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o terminal como root
+        2 - Navegar até a pasta onde estão os arquivos
+        3 - Executar o seguinte comando: php instalador.php
+
+    Para DESINSTALAR o programa, deve-se seguir os seguintes passos:
+
+        1 - Abrir o terminal como root
+        2 - Executar o seguinte comando: rm -f /etc/cron.d/inventarioidear
